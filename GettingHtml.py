@@ -1,6 +1,8 @@
 #-*- coding: utf-8 -*-
-from urllib.request import urlopen
-from urllib.request import HTTPError
+#from urllib2.request import urlopen
+#from urllib2.request import HTTPError
+from urllib2 import urlopen
+from urllib2 import HTTPError
 from bs4 import BeautifulSoup
 import sys
 
