@@ -20,7 +20,8 @@ print('==== full tag ====')
 print(bsObj)
 ~~~
 
-일단은 urlopen이라는 함수로 data를 가져오고 이 data를 BeautifulSoup패키지로 원하는 내용을 가져올 수 있는 것으로 보인다.
+일단은 urlopen()이라는 함수로 data를 가져오고 이 data를 BeautifulSoup패키지로 원하는 내용을 가져올 수 있는 것으로 보인다.
+urlopen()함수로 가져온 data값의 타입은 뭔지, 그리고 BeautifulSoup패키지 활용방법에 대해 스터디가 필요할 것 같다.
 urllib에 대해서는 다음 링크의 내용을 참고해보자
 https://docs.python.org/2/library/urllib2.html
 ~~~
