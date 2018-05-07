@@ -72,13 +72,13 @@ find(tag, attributes, recursive, text, keywords)
 .findAll({"h1","h2","h3","h4","h5","h6"})
 ~~~
 
-***attributes 매개변수***는 속성으로 이루어진 파이썬 딕셔너리를 받고, 그 중에 하나에 일치하는 태그를 찾는다.
+**attributes 매개변수**는 속성으로 이루어진 파이썬 딕셔너리를 받고, 그 중에 하나에 일치하는 태그를 찾는다.
 예를 들어 다음 함수는 HTML문서에서 녹색과 빨간색 span태그를 모두 반환한다.
 ~~~python
 .findAll("span",{"class":{"green","red"}})
 ~~~
 
-***recursive 매개변수***는 모두 불리언이고, true이면 매개변수에 일치하는 태그를 재귀적으로 자식을 순회하며 찾게된다.
+**recursive 매개변수**는 모두 불리언이고, true이면 매개변수에 일치하는 태그를 재귀적으로 자식을 순회하며 찾게된다.
 false이면 최상위 태그만을 찾는다. 기본적으로 findAll은 재귀적으로(recursive = true)로 동작한다. 성능이 중요하지 않다면 그대로 두는 것이 좋다.
 예제 페이지에서 'the prin
 ce'가 몇번 나타났는지 보자
@@ -87,11 +87,11 @@ nameList = bsObj.findAll(text="the prince")
 print(len(nameList))
 ~~~
 
-***limit 매개변수***는 물론 findAll에만 쓰인다. find는 findAll을 호출하면서 limit을 1로 호출한 것과 같다.
+**limit 매개변수**는 물론 findAll에만 쓰인다. find는 findAll을 호출하면서 limit을 1로 호출한 것과 같다.
 즉, 페이지의 항목 **처음 몇 개**에만 관심을 있을 때 사용하는 매개변수임.
 이 매개변수는 페이지에 나타난 순서대로 찾으며, 그 순서가 원하는 것과 일치하지 않을 수 있다는 점을 주의해야한다.
 
-***keyword 매개변수***는 특정 속성이 포함된 태그를 선택할 때 사용한다.
+**keyword 매개변수**는 특정 속성이 포함된 태그를 선택할 때 사용한다.
 ~~~python
 allText = bsObj.findAll(id="text")
 print(allText[0].getText())
