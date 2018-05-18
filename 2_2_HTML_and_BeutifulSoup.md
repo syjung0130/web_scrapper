@@ -1,18 +1,18 @@
 
 ## 2.2.2 기타 BeutifulSoup 객체
 
-- BeutifulSoup 객체
+**BeutifulSoup 객체**  
 이전 코드 예제에서 bsObj와 같은 형태로 사용함
 
-- Tag 객체
+**Tag 객체**  
 리스트 호출 또는 BeautifulSoup 객체에 find와 findAll을 호출, 또는 직접 접근해서 사용함
 ~~~python
 bsObj.div.h1
 ~~~
-- NavigableString 객체
+**NavigableString 객체**  
 태그 자체가 아닌 태그 안에 들어있는 텍스트를 나타냄. 일부 함수는 Navigable Strings를 반환함
 
-- Comment 객체
+**Comment 객체**  
 주석 태그 안에 들어있는 아래와 같은 HTML 주석을 찾는데 사용함
 ~~~HTML
 <!-- like this one -->
