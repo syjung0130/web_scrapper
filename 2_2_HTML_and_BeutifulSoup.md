@@ -2,7 +2,7 @@
 ## 2.2.2 기타 BeutifulSoup 객체
 
 **BeutifulSoup 객체**  
-이전 코드 예제에서 bsObj와 같은 형태로 사용함
+이전 코드 예제에서와  bsObj와 같은 형태로 사용함
 
 **Tag 객체**  
 리스트 호출 또는 BeautifulSoup 객체에 find와 findAll을 호출, 또는 직접 접근해서 사용함
