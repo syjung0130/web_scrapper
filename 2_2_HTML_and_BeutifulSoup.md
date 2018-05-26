@@ -1,18 +1,19 @@
 
-## 2.2.2 기타 BeutifulSoup 객체
+## 2.2.1 기타 BeutifulSoup 객체
+(여기서의 예제들은 참고용으로만 보도록 하자, 해당 링크의 웹사이트 구조가 바뀌어서 활용이 불가능하다. 다음장부터 예제를 활용해보자)
 
-**BeutifulSoup 객체**  
-이전 코드 예제에서와  bsObj와 같은 형태로 사용함
+- BeutifulSoup 객체
+이전 코드 예제에서 bsObj와 같은 형태로 사용함
 
-**Tag 객체**  
+- Tag 객체
 리스트 호출 또는 BeautifulSoup 객체에 find와 findAll을 호출, 또는 직접 접근해서 사용함
 ~~~python
 bsObj.div.h1
 ~~~
-**NavigableString 객체**  
+- NavigableString 객체
 태그 자체가 아닌 태그 안에 들어있는 텍스트를 나타냄. 일부 함수는 Navigable Strings를 반환함
 
-**Comment 객체**  
+- Comment 객체
 주석 태그 안에 들어있는 아래와 같은 HTML 주석을 찾는데 사용함
 ~~~HTML
 <!-- like this one -->
@@ -53,21 +54,25 @@ BeutifulSoup라이브러리도 자식과 자손을 구별한다.
 예를 들어보면
  - bsObj.body.h1은 body의 자손인 첫번째 h1태그를 선택하고 body 바깥에 있는 태그에 대해서는 동작하지 않는다.
  - bsObj.div.findAll("img")는 문서의 첫번째 div태그를 찾고, 그 div태그의 자손인 모든 img태그의 목록을 가져온다.
- - 자식만 찾을 때는 .children을 사용한다.
-
+ - 자식만 찾을 때는 .children을 사용한다.  
+아래 코드는 giftList테이블에 들어있는 제품 행 목록을 출력한다.
 
 
 ```python
-#이 코드는 giftList테이블에 들어있는 제품 행 목록을 출력한다.
-from urllib.request import urlopen
+#print all row list from giftList table
+#from urllib.request import urlopen
+from urllib2 import urlopen
 from bs4 import BeautifulSoup
 
 html = urlopen("http://www.pythonscrapping.com/pages/page3.html")
 bsObj = BeautifulSoup(html, "html.parser")
-
-for child in bsObj.find("table", {"id":"giftList"}).children:
+print(bsObj.findAll("table", {"id":"giftList"}))
+for child in bsObj.find("table",{"id":"giftList"}).children:
     print(child)
 ```
+
+    None
+
 
 ## 형제
 BeautifulSoup의 next_siblings()함수는 테이블에서 데이터를 쉽게 수집할 수 있고, 테이블에 타이틀 행이 있을 때 유용하다.
